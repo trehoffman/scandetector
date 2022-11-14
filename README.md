@@ -12,7 +12,7 @@ Import the autocomplete library:
 <script src="js/scandetector.js"></script>
 ```
 
-Initialize an input with default settings ("keyup" event listener, mininum scan length of 3, time threshold of 400 milliseconds):
+Initialize an input with default settings ("keyup" event listener, mininum scan length of 3, time threshold of 400 milliseconds, submission trigger key of "Enter"):
 
 ```
 var scandetector = new ScanDetector({
@@ -20,10 +20,11 @@ var scandetector = new ScanDetector({
 });
 ```
 
-Initialize an input with "keyup" event listener, minimum scan length of 3, and a time threshold of 1000 milliseconds:
+Initialize an input with "keyup" event listener, minimum scan length of 3, a time threshold of 1000 milliseconds, and change the submission trigger to "Shift":
 
 ```
 var scandetector = new ScanDetector({
+ submissionTriggerKey: "Shift",
  target: document.querySelector('input'), //specify input elememnt in DOM
  threshold: 1000
 });

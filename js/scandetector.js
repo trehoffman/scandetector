@@ -1,8 +1,8 @@
 function ScanDetector(options) {
 	var me = this;
+	me.eventLog = [];
 	me.eventTypes = ["keydown", "keypress", "keyup"];
 	me.options = options || {};
-	me.eventLog = [];
 	
 	me.init = function() {
 		try {
@@ -12,10 +12,11 @@ function ScanDetector(options) {
 		}
 	};
 	
-	me.eventHandler = function(e) {		
+	me.eventHandler = function(e) {
 		if (e.target.value === '') eventLog = [];
 		me.eventLog.push(e);
-		if (e.key === 'Enter') me.process(e);
+		let submissionTriggerKey = me.options.submissionTriggerKey || 'Enter';
+		if (e.key === submissionTriggerKey) me.process(e);
 	};
 	
 	me.process = function(e) {
