@@ -45,14 +45,14 @@ Capture a event "scan" from scandetector:
 ```
 //add event listener to targeted input element in DOM
 document.querySelector('input').addEventListener('scan', function(e) {
-			console.log('scan', e);
-			console.log(e.detail);
-			/*
-    examples of e.detail returned from scandetector:
-    { value: "first scan", entryType: "manual"}
-    { value: "second scan", entryType: "barcode scanning"} 
-   */
-		});
+	console.log('scan', e);
+	console.log(e.detail);
+	/*
+	examples of e.detail returned from scandetector:
+	{ value: "first scan", entryType: "manual"}
+	{ value: "second scan", entryType: "barcode scanning"} 
+	*/
+});
 ```
 
 See code for further details.
