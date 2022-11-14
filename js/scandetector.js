@@ -33,7 +33,7 @@ function ScanDetector(options) {
 		let eventLog = me.eventLog || [];
 		
 		let minimumScanLength = me.options.minimumScanLength || 3;
-		if (eventLog.length < minimumScanLength) return false;
+		if (eventLog.length < minimumScanLength) return 'manual';
 		
 		let threshold = me.options.threshold || 400; 		
 		let firstEvent = eventLog.shift();
