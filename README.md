@@ -51,7 +51,7 @@ document.querySelector('input').addEventListener('scan', function(e) {
 	/*
 	examples of e.detail returned from scandetector:
 	{ value: "first scan", entryType: "manual"}
-	{ value: "second scan", entryType: "barcode scanning"} 
+	{ value: "second scan", entryType: "barcode scanner"} 
 	*/
 });
 ```
