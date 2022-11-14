@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Scan Detector</title>
+</head>
+<body>
+	<div>
+		<input name="scan" placeholder="scan data here" autocomplete="false" autofocus/>
+	</div>
+	<div>
+		<pre class="scanlog"></pre>
+	</div>
+	<script src="js/scandetector.js"></script>
+	<script>
+		var scan_input = document.querySelector("input[name=scan]");
+		var scan_log = [];
+		var scandetector = new ScanDetector({
+			target: scan_input
+		});
+		
+		function showScanLog() {
+			document.querySelector('pre').innerHTML = JSON.stringify(scan_log.reverse(), null, 2);
+		}
+	
+		scan_input.addEventListener('scan', function(e) {
+			console.log('scan', e);
+			scan_log.push(e.detail);
+			showScanLog();
+		});
+	</script>
+</body>
+</html>
