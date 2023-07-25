@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A simple library for ininitiazing input fields for barcode scanning.  Will fire a "scan" event from targeted element with a "detail" object that includes the value entered and the "entryType" ("manual" vs "barcode scanner").  The "entryType" is guessed based on the number of input events ("keyup", "keydown", or "keypress" depending on what is specified) and the difference between when the first and last input event ocurred.
+A simple library for initializing input fields for barcode scanning.  Will fire a "scan" event from targeted element with a "detail" object that includes the value entered and the "entryType" ("manual" vs "barcode scanner").  The "entryType" is guessed based on the number of input events ("keyup", "keydown", or "keypress" depending on what is specified) and the difference between when the first and last input event ocurred.
 
 ## Quick Start (https://trehoffman.github.io/scandetector/)
 
